@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" ></script>
+	<title>SET TIME</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			word-wrap:break-word;
+			
+		}
+
+		body {
+			background-image: url('Baby pics/baby.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.top {
+			width: 100%;
+			height:auto;
+			display: flex;
+			flex-direction: row;
+			margin-top:30px;
+			
+		}
+            .top .col-md {
+                height: 50px;
+                border-radius: 50%;
+                width: 50%;
+				
+            }
+      
+        .top #one {
+            background-color: #ff4d88 ;
+			
+        }
+            .top #one > h1, .top #two > h1, .top #three > h1, .top #four > h1 {
+                font-size:24px;
+				text-align: center;
+				color:black;
+				text-transform:uppercase;
+				padding-top:10px;
+				font-weight:1000;
+            }
+
+            .top #two {
+                background-color: #80bfff;
+            }
+       
+       
+
+        .top #three {
+            background-color: #88ff4d;
+        }
+
+
+
+            .top #four {
+                background-color: #ff4dff;
+            }
+
+         
+			
+		h1 > #do {
+			animation: do 0.7s ease infinite;
+		}
+
+		@keyframes do {
+
+			to {
+				opacity: 0;
+			}
+		}
+        .middle {
+            display: flex;
+            flex-direction: row;
+			flex-wrap:wrap;
+			justify-content:space-evenly;
+			align-items:center;
+        }
+
+      
+        .baby {
+		width:13%;	
+            box-shadow: 1px -1px 2px 3px gray;
+            height: auto;
+            background-color: white;
+            cursor: pointer;
+		padding-bottom:50px;
+		
+        }
+        .play, .travel, .bedding, .diaper, .feeding, .skincare {
+            display: flex;
+            flex-direction: column;
+			align-items:center;
+        }
+       
+			
+
+			.baby > .limit {
+				background-color: red;
+				border-radius: 100%;
+				
+				padding: 10px;
+				
+				color:white;
+			}
+
+			.baby img:hover {
+				width: 100%;
+				height: auto;
+			}
+
+		.diwali {
+			color: white;
+			font-weight: bold;
+			font-size: 25px;
+			margin-top: 25px;
+		}
+
+	@media screen And (max-width:900px){
+		.baby{
+			width:30%;
+		}
+	}
+        @media screen And (max-width:600px) {
+            .baby {
+                width: 45%;
+            }
+			#time{
+				padding:150px;
+			}
+        }
+       
+	</style>
+</head>
+<body>
+	<div class="top">
+		<div class="col-md" id="one">
+			
+
+				<h1><i >BABY</i></h1>
+		
+		</div>
+		<div class="col-md" id="two">
+			
+				<h1><i>PRODUCTS</i></h1>
+			
+		</div>
+	</div>
+		
+
+		<h1 style="text-align:center;" class="diwali">
+			<span id="do">NEW YEAR OFFER!!!!</span> ends in
+			<span  id="time" style="color:yellow">
+				<span id="days">00</span>
+				<span>:</span>
+				<span id="hour">00</span>
+				<span>:</span>
+				<span id="minute">00</span>
+				<span>:</span>
+				<span id="second">00</span>
+			</span>
+		</h1>
+	<br />
+	<div class=middle>
+		
+			<div class="play baby ">
+				<img id="image1" src="Baby pics\baby_play.jpg" alt="baby play" width="80%">
+				<h4 id="Play">Baby Play Time</h4><br>
+				<span class="limit">25% discount !!!</span>
+
+			</div>
+			<div class="travel baby ">
+				<img id="image2" src="Baby pics\baby_travel.jpg" alt="baby travel" width="80%">
+				<h4 id="travel">Travel</h4><br>
+				<span class="limit">17% discount !!!</span>
+
+			</div>
+			<div class="bedding baby ">
+				<img id="image3" src="Baby pics\bedding.jpg" alt="bedding" width="80%">
+				<h4 id="bedding">Bedding & Nursery</h4><br>
+				<span class="limit">8% discount !!!</span>
+
+			</div>
+		
+		
+			<div class="diaper baby ">
+				<img id="image4" src="Baby pics\diaper.jpg" alt="diaper" width="80%">
+				<h4 id="dia">Diaper & Wipes</h4><br>
+				<span class="limit">20% discount !!!</span>
+
+			</div>
+			<div class="feeding baby ">
+				<img id="image5" src="Baby pics\feeding_supplies.jpg" alt="feeding supplies" width="80%">
+				<h4 id="feeding">Feeding Supplies</h4><br>
+				<span class="limit">15% discount !!!</span>
+
+			</div>
+			<div class="skincare baby ">
+				<img id="image6" src="Baby pics\skin_care.jpg" alt="skin care" width="80%">
+				<h4 id="skin">Baby Skin Care</h4><br>
+				<span class="limit">10% discount !!!</span>
+			</div>
+		
+	</div>
+
+		<div class="top">
+			<div class="col-md" id="three">
+				<h1><i>Happy</i></h1>
+			</div>
+
+			<div class="col-md" id="four">
+				<h1><i>Diwali</i></h1>
+			</div>
+		</div>
+
+
+		<script>
+			setInterval(shp1, 1000)
+			setInterval(shp2, 2000)
+			setInterval(shp3, 3000)
+			setInterval(shp4, 4000)
+			function shp1() {
+				document.getElementById('one').style.backgroundColor = '#ff4dff';
+				document.getElementById('two').style.backgroundColor = '#ff4d88';
+				document.getElementById('three').style.backgroundColor = '#80bfff';
+				document.getElementById('four').style.backgroundColor = '#88ff4d';
+			}
+			function shp2() {
+				document.getElementById('one').style.backgroundColor = '#88ff4d';
+				document.getElementById('two').style.backgroundColor = '#ff4dff';
+				document.getElementById('three').style.backgroundColor = '#ff4d88';
+				document.getElementById('four').style.backgroundColor = '#80bfff';
+			}
+			function shp3() {
+				document.getElementById('one').style.backgroundColor = '#80bfff';
+				document.getElementById('two').style.backgroundColor = '#88ff4d';
+				document.getElementById('three').style.backgroundColor = '#ff4dff';
+				document.getElementById('four').style.backgroundColor = '#ff4d88';
+			}
+			function shp4() {
+				document.getElementById('one').style.backgroundColor = '#ff4d88';
+				document.getElementById('two').style.backgroundColor = '#80bfff';
+				document.getElementById('three').style.backgroundColor = '#88ff4d';
+				document.getElementById('four').style.backgroundColor = '#ff4dff';
+			}
+
+			
+		
+
+
+
+			setInterval(img1, 2000)
+			setInterval(img2, 4000)
+			setInterval(img3, 6000)
+			setInterval(img4, 8000)
+			setInterval(img5, 10000)
+			setInterval(img6, 12000)
+			function img1() {
+				document.getElementById('image4').src = "Baby pics/changing_set.jpg";
+				document.getElementById('dia').innerHTML = "changing set";
+				document.getElementById('image6').src = "Baby pics/Soap&wash.jpg";
+				document.getElementById('skin').innerHTML = "Soap & wash";
+				document.getElementById('image3').src = "Baby pics/Cots&craddles.jpg";
+				document.getElementById('bedding').innerHTML = "Cots & Craddles";
+				document.getElementById('image5').src = "Baby pics/Feeding_bottles.jpg";
+				document.getElementById('feeding').innerHTML = "Feeding Bottles";
+				document.getElementById('image2').src = "Baby pics/Strollers.jpg";
+				document.getElementById('travel').innerHTML = "Strollers";
+				document.getElementById('image1').src = "Baby pics/Playmats.jpg";
+				document.getElementById('Play').innerHTML = "Playmats";
+			}
+			function img2() {
+				document.getElementById('image4').src = "Baby pics/Diaper_Bags.jpg";
+				document.getElementById('dia').innerHTML = "Diaper Bags";
+				document.getElementById('image6').src = "Baby pics/Shampoos.jpg";
+				document.getElementById('skin').innerHTML = "Shampoos";
+				document.getElementById('image3').src = "Baby pics/Booster_seats&higher_chairs.jpg";
+				document.getElementById('bedding').innerHTML = "Booster Seats & Higher Chairs";
+				document.getElementById('image5').src = "Baby pics/Baby_food.jpg";
+				document.getElementById('feeding').innerHTML = "Baby Food";
+				document.getElementById('image2').src = "Baby pics/Prams.jpg";
+				document.getElementById('travel').innerHTML = "Prams";
+				document.getElementById('image1').src = "Baby pics/Swings.jpg";
+				document.getElementById('Play').innerHTML = "Swings";
+			}
+			function img3() {
+				document.getElementById('image4').src = "Baby pics/Cloth_Diaper.jpg";
+				document.getElementById('dia').innerHTML = "Cloth Diaper";
+				document.getElementById('image6').src = "Baby pics/Lotion&Cream.jpg";
+				document.getElementById('skin').innerHTML = "Lotion & Cream";
+				document.getElementById('image3').src = "Baby pics/Blankets&swaddlers.jpg";
+				document.getElementById('bedding').innerHTML = "Blankets & Swaddlers";
+				document.getElementById('image5').src = "Baby pics/Sippy_cups.jpg";
+				document.getElementById('feeding').innerHTML = "Sippy Cups";
+				document.getElementById('image2').src = "Baby pics/Carry_cots.jpg";
+				document.getElementById('travel').innerHTML = "Carry Cots";
+				document.getElementById('image1').src = "Baby pics/Bouncers&rockers.jpg";
+				document.getElementById('Play').innerHTML = "Bouncers Rockers";
+			}
+			function img4() {
+				document.getElementById('image4').src = "Baby pics/Wet_wipes.jpg";
+				document.getElementById('dia').innerHTML = "Wet Wipes";
+				document.getElementById('image6').src = "Baby pics/Powders.jpg";
+				document.getElementById('skin').innerHTML = "Powders";
+				document.getElementById('image3').src = "Baby pics/Potty_Seats.jpg";
+				document.getElementById('bedding').innerHTML = "Potty Seats";
+				document.getElementById('image5').src = "Baby pics/Bottle_sterilizers.jpg";
+				document.getElementById('feeding').innerHTML = "Bottle Sterilizers";
+				document.getElementById('image2').src = "Baby pics/Carriers.jpg";
+				document.getElementById('travel').innerHTML = "Carriers";
+				document.getElementById('image1').src = "Baby pics/Walkers.jpg";
+				document.getElementById('Play').innerHTML = "Walkers";
+			}
+			function img5() {
+				document.getElementById('image4').src = "Baby pics/Tapped_diaper.jpg";
+				document.getElementById('dia').innerHTML = "Tapped Diaper";
+				document.getElementById('image6').src = "Baby pics/Hair&massage_oil.jpg";
+				document.getElementById('skin').innerHTML = "Hair & massage oil";
+				document.getElementById('image3').src = "Baby pics/Baby_safety.jpg";
+				document.getElementById('bedding').innerHTML = "Baby Safety";
+				document.getElementById('image5').src = "Baby pics/Bibs.jpg";
+				document.getElementById('feeding').innerHTML = "Bibs";
+				document.getElementById('image2').src = "Baby pics/Travel_bags.jpg";
+				document.getElementById('travel').innerHTML = "Travel Bags";
+				document.getElementById('image1').src = "Baby pics/Toys.jpg";
+				document.getElementById('Play').innerHTML = "Toys";
+			}
+			function img6() {
+				document.getElementById('image4').src = "Baby pics/diaper.jpg";
+				document.getElementById('dia').innerHTML = "Diaper";
+				document.getElementById('image6').src = "Baby pics/skin_care.jpg";
+				document.getElementById('skin').innerHTML = "skin Care";
+				document.getElementById('image3').src = "Baby pics/bedding.jpg";
+				document.getElementById('bedding').innerHTML = "Bedding";
+				document.getElementById('image5').src = "Baby pics/feeding_supplies.jpg";
+				document.getElementById('feeding').innerHTML = "Feeding Supplies";
+				document.getElementById('image2').src = "Baby pics/baby_travel.jpg";
+				document.getElementById('travel').innerHTML = "Baby Travel";
+				document.getElementById('image1').src = "Baby pics/baby_play.jpg";
+				document.getElementById('Play').innerHTML = "Baby Play";
+			}
+			function timing() {
+				var days = document.getElementById('days');
+				var hours = document.getElementById('hour');
+				var minutes = document.getElementById('minute');
+				var seconds = document.getElementById('second');
+
+
+
+
+				const currentyear = new Date().getFullYear();
+
+				const diwalidate = new Date('January 01 2023 00:00:00');
+				const currentdate = new Date();
+				const diff = diwalidate - currentdate;
+
+				const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+				const hr = Math.floor((diff / 1000 / 60 / 60) % 24);
+				const mins = Math.floor((diff / 1000 / 60) % 60);
+				const sec = Math.floor((diff / 1000) % 60);
+
+				days.innerHTML = d < 10 ? '0' + d : d;
+				hours.innerHTML = hr < 10 ? '0' + hr : hr;
+				minutes.innerHTML = mins < 10 ? '0' + mins : mins;
+				seconds.innerHTML = sec < 10 ? '0' + sec : sec;
+			}
+			setInterval(timing, 1000)
+		</script>
+
+
+
+
+</body>
+</html>
